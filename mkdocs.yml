@@ -7,6 +7,9 @@ repo_url: https://github.com/capjamesg/python-packaging-best-practices
 edit_uri: https://github.com/capjamesg/python-packaging-best-practices/tree/main/docs
 copyright: CC-BY-NC-SA-4.0
 
+extra_css:
+  - stylesheets/styles.css
+
 nav:
   - Introduction: index.md
   - READMEs: readmes.md
