@@ -1,42 +1,33 @@
 ## Best Practices for Packaging Python Projects
 
-I have contributed to numerous Python packages over the last few months, 
-from a package to use foundation vision models to train smaller models to 
-a small package for computing word surprisals. When I am working on 
-packages, I ask myself the question "what can I do to make the developer 
-experience as seamless as possible?"
+I have contributed to numerous Python packages over the last few months, from a package to use foundation vision 
+models to train smaller models to a small package for computing word surprisals. When I am working on packages, I 
+ask myself the question "what can I do to make the developer experience as seamless as possible?"
 
-Strong documentation and package organization is an excellent long-term 
-investment. The more comprehensive and intuitive your documentation is, 
-the easier it is for people to use the library. Notably, good 
-documentation makes the lives of all maintainers (and future maintainers!) 
-easier. Robust documentation makes it easier to navigate and use a 
-codebase, and helps to build a shared understanding around the structure 
-of a codebase.
+Strong documentation and package organization is an excellent long-term investment. The more comprehensive and 
+intuitive your documentation is, the easier it is for people to use the library. Notably, good documentation makes 
+the lives of all maintainers (and future maintainers!) easier. Robust documentation makes it easier to navigate 
+and use a codebase, and helps to build a shared understanding around the structure of a codebase.
 
-There are a few tips I have picked up while working on packaging Python 
-projects that I want to share. In this article, I share the tasks, 
-questions, and thoughts that come to mind when I am preparing to launch a 
-Python project. I cover everything from documentation to CI integrations 
-to code style.
+There are a few tips I have picked up while working on packaging Python projects that I want to share. In this 
+article, I share the tasks, questions, and thoughts that come to mind when I am preparing to launch a Python 
+project. I cover everything from documentation to CI integrations to code style.
 
 ## Documentation
 
 When I am working on a Python package, I like to ensure I have:
 
 1. A well-written README;
-2. Comprehensive documentation for public-facing functions in the 
-codebase, and;
-3. Auxillery information about the project (i.e. compatability, project 
-organization, information if the package is part of a broader ecosystem).
+2. Comprehensive documentation for public-facing functions in the codebase, and;
+3. Auxillery information about the project (i.e. compatability, project organization, information if the package 
+is part of a broader ecosystem).
 
 What makes a well-written README? Good question!
 
 ### READMEs
 
-My approach to READMEs is visual. What can I do to help make the project 
-as approachable as possible? One structure I like to follow in READMEs, 
-inspired by the `supervision` project, is:
+My approach to READMEs is visual. What can I do to help make the project as approachable as possible? One 
+structure I like to follow in READMEs, inspired by the `supervision` project, is:
 
 1. Header image, if relevant
 2. A 1-2 sentence introduction of the project
@@ -52,32 +43,26 @@ I will talk about each of these in their own sections.
 
 #### Header Image
 
-A header image that is relevant to the project goes a long way to easing 
-someone into a repository. If your repository helps someone build 
-something visual (i.e. an image processing library, a web compoenent), an 
-image showing the project in action is great.
+A header image that is relevant to the project goes a long way to easing someone into a repository. If your 
+repository helps someone build something visual (i.e. an image processing library, a web compoenent), an image 
+showing the project in action is great.
 
 #### Introduction
 
-A short, snappy introduction to the project helps someone quickly evaluate 
-if the repository is relevant to them. Here are some examples from 
-projects on which I have worked:
+A short, snappy introduction to the project helps someone quickly evaluate if the repository is relevant to them. 
+Here are some examples from projects on which I have worked:
 
-- Autodistill uses big, slower foundation models to train small, faster 
-supervised models. Using `autodistill`, you can go from unlabeled images 
-to inference on a custom model running at the edge with no human 
-intervention in between.
-- **indieweb-utils** provides building blocks for people  implementing 
-IndieWeb applications in Python. Discover IndieWeb  endpoints, find feeds 
-on a page, infer page names, generate reply  contexts, and more!
-- `mf2py` is a full-featured microformats2 (mf2) parser implemented in 
-Python. mf2py implements the full mf2 specification, including backward 
-compatibility with microformats1.
+- Autodistill uses big, slower foundation models to train small, faster supervised models. Using `autodistill`, 
+you can go from unlabeled images to inference on a custom model running at the edge with no human intervention in 
+between.
+- **indieweb-utils** provides building blocks for people  implementing IndieWeb applications in Python. Discover 
+IndieWeb  endpoints, find feeds on a page, infer page names, generate reply  contexts, and more!
+- `mf2py` is a full-featured microformats2 (mf2) parser implemented in Python. mf2py implements the full mf2 
+specification, including backward compatibility with microformats1.
 
 #### GitHub Badges
 
-GitHub badges visually convey useful information about your project. Some 
-badges that may be relevant include:
+GitHub badges visually convey useful information about your project. Some badges that may be relevant include:
 
 1. PyPi release badge, linking to your project
 2. Colab notebook (if relevant)
@@ -85,85 +70,68 @@ badges that may be relevant include:
 4. License
 5. Any other relevant information (Arxiv link, CI failing / passing)
 
-You should choose the badges that make sense to you. Sites useful for 
-creating badges include:
+You should choose the badges that make sense to you. Sites useful for creating badges include:
 
 1. ...
 
 #### Brief Installation Instructions
 
-Installation instructions should be concise. Use as little text as you 
-need to explain how to install your project. If installation takes several 
-steps, list each command. Separate commands with text explaining what each 
+Installation instructions should be concise. Use as little text as you need to explain how to install your 
+project. If installation takes several steps, list each command. Separate commands with text explaining what each 
 one does.
 
-Be sure to note any device-specific installation instructions. Nest these 
-under appropriate headings.
+Be sure to note any device-specific installation instructions. Nest these under appropriate headings.
 
-***Pro tip**: Enclose any build from source instructions in a HTML 
-`<details>` block so they don't take up too much room, if you are 
-publishing your README to a place that supports HTML parsing (i.e PyPi, 
-GitHub).*
+***Pro tip**: Enclose any build from source instructions in a HTML `<details>` block so they don't take up too 
+much room, if you are publishing your README to a place that supports HTML parsing (i.e PyPi, GitHub).*
 
 #### Quickstart
 
-One of my favourite parts of a README is the Quickstart. This is the code 
-that shows how your project works, at a high level.
+One of my favourite parts of a README is the Quickstart. This is the code that shows how your project works, at a 
+high level.
 
-The Quickstart is an opportunity for you to showcase a selection of the 
-most useful functions in your library. Select up to three different code 
-examples to share in the Quickstart, each nested under their own headings.
+The Quickstart is an opportunity for you to showcase a selection of the most useful functions in your library. 
+Select up to three different code examples to share in the Quickstart, each nested under their own headings.
 
 #### Community Resources
 
-Have other people written articles or recorded videos about your project? 
-Are there any examples from social media you want to share? This is the 
-place to document them! Resources from third-parties on how to use your 
-project, or resources you have complied yourself, all can be helpful 
-someone who is new to your project.
+Have other people written articles or recorded videos about your project? Are there any examples from social media 
+you want to share? This is the place to document them! Resources from third-parties on how to use your project, or 
+resources you have complied yourself, all can be helpful someone who is new to your project.
 
 #### Contributing Information
 
-Contribution guidelines are essential for projects that want to accept 
-external contributions. If this is you, allocate some time to write a 
-`CONTRIBUTING.md` file, the file that outlines how people can contribute 
-to your project.
+Contribution guidelines are essential for projects that want to accept external contributions. If this is you, 
+allocate some time to write a `CONTRIBUTING.md` file, the file that outlines how people can contribute to your 
+project.
 
-Your contribution guidelines are a welcome message for people to 
-contribute to your project. Use them to explain:
+Your contribution guidelines are a welcome message for people to contribute to your project. Use them to explain:
 
-1. The philosophy behind your project, and how this relates to the scope 
-of what the project should do.
+1. The philosophy behind your project, and how this relates to the scope of what the project should do.
 2. How people can get started?
    1. Do you want them to file GitHub issues before a PR?
    2. How can people find out if something is already being worked on?
-   3. Do contributors need to write test cases as part of their original 
-commit, or after feedback has been given by a reviewer?
-   4. Do you have any resources to share that could be helpful (i.e. a 
-tutorial for adding a new module to the codebase)?
+   3. Do contributors need to write test cases as part of their original commit, or after feedback has been given 
+by a reviewer?
+   4. Do you have any resources to share that could be helpful (i.e. a tutorial for adding a new module to the 
+codebase)?
 3. The code of conduct to which your project adheres. The [IndieWeb 
-community](https://indieweb.org/code-of-conduct-examples) has a collection 
-of many codes of conduct that can help you write one for your project. If 
-you opt to write your own code of conduct, save it in a file called 
+community](https://indieweb.org/code-of-conduct-examples) has a collection of many codes of conduct that can help 
+you write one for your project. If you opt to write your own code of conduct, save it in a file called 
 `CODE_OF_CONDUCT.md` in the main directory of your project.
 
 #### Citation
 
-Do you have a preferred way in which people can cite your project? Add it 
-to your README! Optionally, create a `CITATION.cff` file that shares how 
-you would prefer people to cite your work. GitHub parses these files and 
-creates a human-readable interface with copy-paste examples for APA and 
-BibTeX citations.
+Do you have a preferred way in which people can cite your project? Add it to your README! Optionally, create a 
+`CITATION.cff` file that shares how you would prefer people to cite your work. GitHub parses these files and 
+creates a human-readable interface with copy-paste examples for APA and BibTeX citations.
 
 #### License
 
-There are many materials online that discuss choosing a license. Allocate 
-time to choose a license that matches your attribution desires, commercial 
-requirements, and all of the other factors that are meaningful to you and 
-your contributors. GitHub has more information on how to choose a project 
-license. Ask fellow developers who have worked with open source licenses 
-before if you have questions; do independent research to come to a 
-conclusion.
+There are many materials online that discuss choosing a license. Allocate time to choose a license that matches 
+your attribution desires, commercial requirements, and all of the other factors that are meaningful to you and 
+your contributors. GitHub has more information on how to choose a project license. Ask fellow developers who have 
+worked with open source licenses before if you have questions; do independent research to come to a conclusion.
 
 Your license should be saved in a file called `LICENSE`.
 
@@ -171,64 +139,95 @@ Your license should be saved in a file called `LICENSE`.
 
 ### Project Documentation
 
-READMEs are the first entry point for many developers to coding projects, 
-but it should not be your only documentation. Long READMEs with extensive 
-technical text and examples can become unwieldy and cause information 
-overload. For documenting the full functionality of your project, and 
-discussing specific topics in more depth, you should maintain external 
-documentation.
+READMEs are the first entry point for many developers to coding projects, but it should not be your only 
+documentation. Long READMEs with extensive technical text and examples can become unwieldy and cause information 
+overload. For documenting the full functionality of your project, and discussing specific topics in more depth, 
+you should maintain external documentation.
 
-Python documentation tools like mkdocs and sphinx create websites to host 
-your project documentation. The advantage of using a documentation tool 
-built with Python in mind is that these tools often offer extensions that 
-work with your codebase. For example, you can use the `pydocstrings` 
-module to use docstrings to generate documentation with `mkdocs`. Sphinx 
-has a module for generating documentation from docstrings, too.
+Python documentation tools like mkdocs and sphinx create websites to host your project documentation. The 
+advantage of using a documentation tool built with Python in mind is that these tools often offer extensions that 
+work with your codebase. For example, you can use the `pydocstrings` module to use docstrings to generate 
+documentation with `mkdocs`. Sphinx has a module for generating documentation from docstrings, too.
 
 In your documentation, you should have:
 
-1. Your README (you worked so hard on it, why not re-use it for your 
-project home page?)
-2. Links to important resources like your license, contributing 
-guidelines, and code of conduct
+1. Your README (you worked so hard on it, why not re-use it for your project home page?)
+2. Links to important resources like your license, contributing guidelines, and code of conduct
 3. Coverage for your codebase (optional, but preferred)
 
-You should document all public functions and classes in your project. 
-These functions should have:
+You should document all public functions and classes in your project. These functions should have:
 
 1. Type hints
 2. Clear, descriptive summaries
 3. Documentation for what each function parameter does
 4. Example usage, if relevant
 
-You can include all of this information in your Python docstrings. If you 
-do, this information will be consumed by more than just your 
-documentation. For example, Visual Studio Code offers rich syntax 
-highlighting based on some information in docstrings. When you hover over 
-a function name in Visual Studio Code, the IDE shows the docstring 
+You can include all of this information in your Python docstrings. If you do, this information will be consumed by 
+more than just your documentation. For example, Visual Studio Code offers rich syntax highlighting based on some 
+information in docstrings. When you hover over a function name in Visual Studio Code, the IDE shows the docstring 
 information.
 
 ## Linting
 
-Everyone has their own code style preferences, but there is one thing on 
-which we can all agree: it is easier to both read and contribute to code 
-that is consistent in style. Linters can help with this.
+Everyone has their own code style preferences, but there is one thing on which we can all agree: it is easier to 
+both read and contribute to code that is consistent in style. Linters can help with this.
 
-You can use `black` to lint your code. Out of the box, black provides sane 
-defaults for linting. Then, you can use `isort` to order your import 
-statements, ensuring consistency across your project.
+You can use `black` to lint your code. Out of the box, black provides sane defaults for linting. Then, you can use 
+`isort` to order your import statements, ensuring consistency across your project.
 
-When you run a linter for the first time, be sure to do so in a separate 
-PR if your project has other contributors. Do not include any other code 
-changes in such a PR. If your code has never been linted before, or was 
-not linted in a while, you will end up with lots of changes that are hard 
-for someone to review. Your PR will probably get rejected for this reason.
+When you run a linter for the first time, be sure to do so in a separate PR if your project has other 
+contributors. Do not include any other code changes in such a PR. If your code has never been linted before, or 
+was not linted in a while, you will end up with lots of changes that are hard for someone to review. Your PR will 
+probably get rejected for this reason.
 
-- makefile
-- black, pytest
+To help people comply with your project linting requirements, create a `Makefile` that includes a command to run 
+the requisite commands to prepare code for review. Share guidance on how to use this command in your Contributing 
+guidelines.
+
+## Versioning
+
+TODO
 
 ## Release Notes
 
-- changelog
+Release notes help developers track the evolution of your project. You should write release notes before 
+publishing any version of your project, if your project is a library intended for distribution. Keep note of all 
+of your release notes in a changelog. The Make a Changelog site has an easy-to-use template you can use to start 
+your project changelog.
 
+In your changelog, note:
 
+- Additions: What methods and logic did you add to the project?
+- Deprecations: Did you remove anything from the library?
+- Bugs Fixed: What bugs did you fix? Include links to any GitHub Issues that may be relevant to the bug.
+- And anything else you think is important for someone to know who is reading your changelog.
+
+## Continuous Integration
+
+- DRY in your project documentation
+- Release checklist
+  - updated version in pyproject.toml / _ init _ .py
+  - written changelog
+  - created a version on github
+  - published release notes
+- library promotion
+- conclusion
+- web demos?
+
+## Conclusion
+
+This guide is intended as reference material for packaging Python projects and preparing them for release. In this 
+guide, we have covered everything from writing a comprehensive README to what to include in your project release 
+notes (if your project is a library).
+
+While packaging work can feel secondary to the "main" work of a project, writing strong documentation, developing 
+a continuous integration pipeline, and other pieces of advice mentioned in this e-book are a crucial part of 
+publishing a project.
+
+The easier your project is to understand and the less time it takes to solve a problem with your project, the 
+better. A big part of this is providing an easy way for someone to get started: concise installation instructions, 
+a web demo, etc.
+
+If you have any topics you would like to see covered in this e-book, or exapanded upon, please review our 
+contribution guidelines for more information. I am eager to include as much information as possible here, while 
+preserving conciseness, to build a one-stop-shop for key information about preparing Python projects for release.
