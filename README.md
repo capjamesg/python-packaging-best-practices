@@ -27,7 +27,8 @@ My approach to READMEs is visual. What can I do to help make the project as appr
 5. A quickstart, showing how to use key functions in the project
 6. Community resources
 7. Contributing information
-8. License
+8. Citation
+9. License
 
 I will talk about each of these in their own sections.
 
@@ -89,6 +90,10 @@ Your contribution guidelines are a welcome message for people to contribute to y
    4. Do you have any resources to share that could be helpful (i.e. a tutorial for adding a new module to the codebase)?
 3. The code of conduct to which your project adheres. The [IndieWeb community](https://indieweb.org/code-of-conduct-examples) has a collection of many codes of conduct that can help you write one for your project. If you opt to write your own code of conduct, save it in a file called `CODE_OF_CONDUCT.md` in the main directory of your project.
 
+#### Citation
+
+Do you have a preferred way in which people can cite your project? Add it to your README! Optionally, create a `CITATION.cff` file that shares how you would prefer people to cite your work. GitHub parses these files and creates a human-readable interface with copy-paste examples for APA and BibTeX citations.
+
 #### License
 
 There are many materials online that discuss choosing a license. Allocate time to choose a license that matches your attribution desires, commercial requirements, and all of the other factors that are meaningful to you and your contributors. GitHub has more information on how to choose a project license. Ask fellow developers who have worked with open source licenses before if you have questions; do independent research to come to a conclusion.
@@ -97,13 +102,34 @@ Your license should be saved in a file called `LICENSE`.
 
 ### TL;DR: Make your README pretty, comprehensive, and actionable ✨
 
-### Source Code Documentation
+### Project Documentation
 
 READMEs are the first entry point for many developers to coding projects, but it should not be your only documentation. Long READMEs with extensive technical text and examples can become unwieldy and cause information overload. For documenting the full functionality of your project, and discussing specific topics in more depth, you should maintain external documentation.
 
-Tools like mkdocs and sphinx create aesthetically pleasing websites 
+Python documentation tools like mkdocs and sphinx create websites to host your project documentation. The advantage of using a documentation tool built with Python in mind is that these tools often offer extensions that work with your codebase. For example, you can use the `pydocstrings` module to use docstrings to generate documentation with `mkdocs`. Sphinx has a module for generating documentation from docstrings, too.
+
+In your documentation, you should have:
+
+1. Your README (you worked so hard on it, why not re-use it for your project home page?)
+2. Links to important resources like your license, contributing guidelines, and code of conduct
+3. Coverage for your codebase (optional, but preferred)
+
+You should document all public functions and classes in your project. These functions should have:
+
+1. Type hints
+2. Clear, descriptive summaries
+3. Documentation for what each function parameter does
+4. Example usage, if relevant
+
+You can include all of this information in your Python docstrings. If you do, this information will be consumed by more than just your documentation. For example, Visual Studio Code offers rich syntax highlighting based on some information in docstrings. When you hover over a function name in Visual Studio Code, the IDE shows the docstring information.
 
 ## Linting
+
+Everyone has their own code style preferences, but there is one thing on which we can all agree: it is easier to both read and contribute to code that is consistent in style. Linters can help with this.
+
+You can use `black` to lint your code. Out of the box, black provides sane defaults for linting. Then, you can use `isort` to order your import statements, ensuring consistency across your project.
+
+When you run a linter for the first time, be sure to do so in a separate PR if your project has other contributors. Do not include any other code changes in such a PR. If your code has never been linted before, or was not linted in a while, you will end up with lots of changes that are hard for someone to review. Your PR will probably get rejected for this reason.
 
 - makefile
 - black, pytest
@@ -112,4 +138,4 @@ Tools like mkdocs and sphinx create aesthetically pleasing websites
 
 - changelog
 
-[This document is a WIP]
+[WIP]
