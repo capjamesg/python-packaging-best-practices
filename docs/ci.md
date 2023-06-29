@@ -1,0 +1,9 @@
+- DRY in your project documentation
+- Release checklist
+  - updated version in pyproject.toml / _ init _ .py
+  - written changelog
+  - created a version on github
+  - published release notes
+- library promotion
+- conclusion
+- web demos?

@@ -8,7 +8,15 @@ edit_uri: https://github.com/capjamesg/python-packaging-best-practices/tree/main
 copyright: CC-BY-NC-SA-4.0
 
 nav:
-  - Home: index.md
+  - Introduction: index.md
+  - READMEs: readmes.md
+  - Project and Code Documentation: code-docs.md
+  - Linting: linting.md
+  - Versioning: versioning.md
+  - Release Notes: release-notes.md
+  - Continuous Integration: ci.md
+  - Conclusion: conclusion.md
+  - Contributing: contributing.md
 
 theme:
   name: 'material'
