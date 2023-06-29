@@ -12,25 +12,27 @@
         <meta name="author" content="capjamesg">
       
       
-        <link rel="canonical" href="https://github.com/capjamesg/python-packaging-best-practices/">
+        <link rel="canonical" href="https://github.com/capjamesg/python-packaging-best-practices/release-notes/">
       
       
+        <link rel="prev" href="../linting/">
       
-        <link rel="next" href="readmes/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../ci/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>python-packaging-best-practices</title>
+        <title>Release Notes - python-packaging-best-practices</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#best-practices-for-packaging-python-projects" class="md-skip">
+        <a href="#release-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="python-packaging-best-practices" class="md-header__button md-logo" aria-label="python-packaging-best-practices" data-md-component="logo">
+    <a href=".." title="python-packaging-best-practices" class="md-header__button md-logo" aria-label="python-packaging-best-practices" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Release Notes
             
           </span>
         </div>
@@ -205,7 +207,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="python-packaging-best-practices" class="md-nav__button md-logo" aria-label="python-packaging-best-practices" data-md-component="logo">
+    <a href=".." title="python-packaging-best-practices" class="md-nav__button md-logo" aria-label="python-packaging-best-practices" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -234,6 +236,81 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readmes/" class="md-nav__link">
+        READMEs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-docs/" class="md-nav__link">
+        Project and Code Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linting/" class="md-nav__link">
+        Linting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning.md" class="md-nav__link">
+        Versioning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -242,16 +319,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Introduction
+          Release Notes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        Introduction
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Release Notes
       </a>
       
         
@@ -259,8 +334,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -270,15 +343,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tldr-make-your-readme-pretty-comprehensive-and-actionable" class="md-nav__link">
-    TL;DR: Make your README pretty, comprehensive, and actionable ✨
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    Versioning
+  <a href="#release-notes" class="md-nav__link">
+    Release Notes
   </a>
   
 </li>
@@ -299,82 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="readmes/" class="md-nav__link">
-        READMEs
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="code-docs/" class="md-nav__link">
-        Project and Code Documentation
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="linting/" class="md-nav__link">
-        Linting
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="versioning.md" class="md-nav__link">
-        Versioning
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes/" class="md-nav__link">
-        Release Notes
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ci/" class="md-nav__link">
+      <a href="../ci/" class="md-nav__link">
         Continuous Integration
       </a>
     </li>
@@ -389,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="conclusion/" class="md-nav__link">
+      <a href="../conclusion/" class="md-nav__link">
         Conclusion
       </a>
     </li>
@@ -404,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -428,8 +419,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -438,15 +427,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tldr-make-your-readme-pretty-comprehensive-and-actionable" class="md-nav__link">
-    TL;DR: Make your README pretty, comprehensive, and actionable ✨
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    Versioning
+  <a href="#release-notes" class="md-nav__link">
+    Release Notes
   </a>
   
 </li>
@@ -469,20 +451,20 @@
   
 
 
-<h1 id="best-practices-for-packaging-python-projects">Best Practices for Packaging Python Projects<a class="headerlink" href="#best-practices-for-packaging-python-projects" title="Permanent link">&para;</a></h1>
-<p>I have contributed to numerous Python packages over the last few months, from a package to use foundation vision 
-models to train smaller models to a small package for computing word surprisals. When I am working on packages, I 
-ask myself the question "what can I do to make the developer experience as seamless as possible?"</p>
-<p>Strong documentation and package organization is an excellent long-term investment. The more comprehensive and 
-intuitive your documentation is, the easier it is for people to use the library. Notably, good documentation makes 
-the lives of all maintainers (and future maintainers!) easier. Robust documentation makes it easier to navigate 
-and use a codebase, and helps to build a shared understanding around the structure of a codebase.</p>
-<p>There are a few tips I have picked up while working on packaging Python projects that I want to share. In this 
-article, I share the tasks, questions, and thoughts that come to mind when I am preparing to launch a Python 
-project. I cover everything from documentation to CI integrations to code style.</p>
-<h3 id="tldr-make-your-readme-pretty-comprehensive-and-actionable">TL;DR: Make your README pretty, comprehensive, and actionable ✨<a class="headerlink" href="#tldr-make-your-readme-pretty-comprehensive-and-actionable" title="Permanent link">&para;</a></h3>
-<h2 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+  <h1>Release Notes</h1>
+
+<h2 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h2>
+<p>Release notes help developers track the evolution of your project. You should write release notes before 
+publishing any version of your project, if your project is a library intended for distribution. Keep note of all 
+of your release notes in a changelog. The Make a Changelog site has an easy-to-use template you can use to start 
+your project changelog.</p>
+<p>In your changelog, note:</p>
+<ul>
+<li>Additions: What methods and logic did you add to the project?</li>
+<li>Deprecations: Did you remove anything from the library?</li>
+<li>Bugs Fixed: What bugs did you fix? Include links to any GitHub Issues that may be relevant to the bug.</li>
+<li>And anything else you think is important for someone to know who is reading your changelog.</li>
+</ul>
 
 
 
@@ -524,10 +506,10 @@ project. I cover everything from documentation to CI integrations to code style.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>
