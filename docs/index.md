@@ -12,9 +12,3 @@ and use a codebase, and helps to build a shared understanding around the structu
 There are a few tips I have picked up while working on packaging Python projects that I want to share. In this 
 article, I share the tasks, questions, and thoughts that come to mind when I am preparing to launch a Python 
 project. I cover everything from documentation to CI integrations to code style.
-
-### TL;DR: Make your README pretty, comprehensive, and actionable ✨
-
-## Versioning
-
-TODO

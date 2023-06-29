@@ -27,3 +27,8 @@ You can include all of this information in your Python docstrings. If you do, th
 more than just your documentation. For example, Visual Studio Code offers rich syntax highlighting based on some 
 information in docstrings. When you hover over a function name in Visual Studio Code, the IDE shows the docstring 
 information.
+
+## Examples
+
+- [supervision](https://roboflow.github.io/supervision/)
+- [granary](https://granary.readthedocs.io/en/)

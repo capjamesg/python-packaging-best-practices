@@ -11,3 +11,7 @@ In your changelog, note:
 - Deprecations: Did you remove anything from the library?
 - Bugs Fixed: What bugs did you fix? Include links to any GitHub Issues that may be relevant to the bug.
 - And anything else you think is important for someone to know who is reading your changelog.
+
+## Examples
+
+- 

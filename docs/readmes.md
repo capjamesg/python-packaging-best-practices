@@ -120,3 +120,9 @@ your contributors. GitHub has more information on how to choose a project licens
 worked with open source licenses before if you have questions; do independent research to come to a conclusion.
 
 Your license should be saved in a file called `LICENSE`.
+
+## Examples
+
+- [Autodistill](https://github.com/autodistill/autodistill)
+- [supervision](https://github.com/roboflow/supervision)
+- [mf2py](https://github.com/microformats/mf2py)
